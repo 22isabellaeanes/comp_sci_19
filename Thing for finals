@@ -1,0 +1,812 @@
+print("""Welcome to the Cyoa, in this you will select different choices to set up a new life within an entirely different and magical world.
+You have 100 points in each of 3 different categories: House, Life, and Self.""")
+
+house=100
+life=100
+self=100
+
+if house>0:
+    if life>0:
+        if self>0:
+
+
+            mansion=50
+            apartment=25
+            smallhouse=10
+
+            housequestion1 = input("""Which house would you like?
+
+    Mansion - worth 50 house points
+        A towering building with dozens of rooms and secret passages.
+        
+    Apartment - worth 25 house points
+        A simple apartment withing a larger building, it's spacios but there are neighbors.
+        
+    Small House - worth 10 house points
+        A quaint home with just enough room for you and any family you have.
+        
+    ("mansion", "apartment", or "small house")
+""")
+
+            if housequestion1=="mansion":
+                house = house-mansion
+                print("House:", house, " Life:", life, " Self:", self)
+    
+            elif housequestion1=="apartment":
+                house = house-apartment
+                print("House:", house, " Life:", life, " Self:", self)
+    
+            elif housequestion1=="small house":
+                house = house-smallhouse
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif housequestion1:
+                print("error, restart game")
+                exit()
+
+            centerofcity=20
+            edgeofcity=15
+            outsidecity=10
+
+            housequestion2 = input("""Where would you like your house to be?
+
+    Center of city - worth 20 house points
+        The center of the city is bustling and always busy and full of life.
+        
+    Edges of city - worth 15 house points
+        Though still within the city it is much quieter on it's edges.
+        
+    Outside of city - worth 10 house points
+        Surrounded by farmland and open forests you would need to travel to reach civilization, but there is plenty fo space and tranquility.
+        
+    ("town center" "the edge of town" or "outside town")
+""")
+
+            if housequestion2=="town center":
+                house = house-centerofcity
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif housequestion2=="the edge of town":
+                house = house-edgeofcity
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif housequestion2=="outside town":
+                house = house-outsidecity
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif housequestion2:
+                print("error, restart game")
+                exit()
+
+            emptyfurnish=0
+            cozyfurnish=10
+            futurefurnish=30
+            plantfurnish=10
+            fancyfurnish=20
+
+            housequestion3 = input("""What kind of furnishings would you like within your home?
+
+    No Furnishings - worth 0 house points
+        Your house is entirely empty except for a few basic necessities.
+        
+    Cozy Furnishings - worth 10 house points
+        Comfy chairs, warm blankets, a fireplace, and an abundance of photographs will make your home have a happy and cozy feel to it.
+        
+    Naturey Furnishings - worth 10 house points
+        Plenty of plants and shrubs will decorate your home allowing nature to thrive within your home.
+        
+    Expensive Furnishings - worth 20 house points
+        Exquisite and somewhat overpriced furniture will decorate your home, creating a noble feel to your home.
+        
+    Futuristic Furnishings - worth 30 house points
+        Though quite out of place to it's surrounding it will be innovatively interesting with a futuristically designed home.
+        
+    ("none", "cozy", "nature", "expensive", or "future")
+""")
+
+            if housequestion3=="none":
+                house = house-emptyfurnish
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif housequestion3=="cozy":
+                house = house-cozyfurnish
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif housequestion3=="nature":
+                house = house-plantfurnish
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif housequestion3=="expensive":
+                house = house-fancyfurnish
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif housequestion3=="future":
+                house = house-futurefurnish
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif housequestion3:
+                print("error, restart game")
+                exit()
+
+            workers=15
+            library=10
+            garden=10
+
+            while house>0:
+                housequestion4 = input("""What other upgrades would you like?
+
+    Houseworkers - worth 15 house points
+        Maids and even a butler who will do all the cooking and cleaning within your home.
+        
+    Library - worth 10 house points
+        An expansive and fully stocked library with multiple comfy reading chairs throughout
+        
+    Garden - worth 10 house points
+        A peaceful garden just outside your home where many plants and herbs can be grown.
+        
+    Add other points to Life - worth remaining house points
+        Add your remaining points to the next section and move on.
+        
+    ("work", "library", "garden", "torture", or "add")
+""")
+
+                if housequestion4=="work":
+                    house = house-workers
+                    print("House:", house, " Life:", life, " Self:", self)
+
+                elif housequestion4=="library":
+                    house = house-library
+                    print("House:", house, " Life:", life, " Self:", self)
+
+                elif housequestion4=="garden":
+                    house = house-garden
+                    print("House:", house, " Life:", life, " Self:", self)
+
+                elif housequestion4=="add":
+                    life = house+life
+                    house = 0
+                    print("House:", house, " Life:", life, " Self:", self)
+
+                elif housequestion4:
+                    print("error, restart game")
+                    exit()
+        if house<0:
+            print("error, restart game")
+            exit()
+            
+        print("alright then, now it is time to move onto your life choices")
+
+        jobless=0
+        lumber=10
+        mine=10
+        smith=15
+        baker=15
+        shop=15
+        teacher=20
+        priest=20
+        beasttamer=25
+        nobility=30
+
+        lifequestion1 = input("""Where will you work?
+
+    Jobless - worth 0 life points
+        You lack a job and this may become problematic in the not to far future.
+        
+    Lumberjack - worth 10 life points
+        You work in the forest cutting down trees and cutting them into usable lumber.
+        
+    Miner - worth 10 life points
+        You work in the mines, mining stone or ores.
+        
+    Smith - worth 15 points
+        You work as a blacksmith, making metal tools and parts.
+        
+    Baker - worth 15 life points
+        You work in a bakery, baking bread and sweets.
+        
+    Shopkeep - worth 15 life points
+        You will own your own shop, it can sell whatever you like but if something goes bad you may lose your store.
+        
+    Teacher - worth 20 life points
+        You will teach the next generation and have an impact on the future, you'll be somewhat unappreciated though.
+        
+    Preist/Priestess - worth 20 life points
+        You will work in a temple praying and studying as well as teaching those who come to learn.
+        
+    Beast Tamer - worth 25 life points
+        You are in charge of taming dangerous animals and even magical ones such as griffons or dragons.
+        
+    Nobility - worth 30 life points
+        You don't do much other than see over the towns affair and walk around looking proud and wealthy.
+        
+    ("jobless","lumber","mine","smith","baker","shop","teacher","priest",
+    "beast", or "nobility")
+""")
+
+        if lifequestion1== "jobless":
+            life = life-jobless
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion1=="lumber":
+            life = life-lumber
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion1=="mine":
+            life = life-mine
+            print("House:",house, " Life:", life, " Self:", self)
+
+        elif lifequestion1=="smith":
+            life = life-smith
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion1=="baker":
+            life = life-baker
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion1=="shop":
+            life = life-shop
+            print("House:", house, " Life:", life, " Self:", self)
+    
+        elif lifequestion1=="teacher":
+            life = life-teacher
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion1=="priest":
+            life = life-priest
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion1=="beast":
+            life=life-beasttamer
+            print("House:", house, " Life:", life, " Self:", self)
+          
+        elif lifequestion1=="nobility":
+            life = life-nobility
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion1:
+            print("error, restart game")
+            exit()
+
+        alone=0       
+        spouse=20
+        child=25
+        family=30
+
+        lifequestion2 = input("""What about your family?
+
+    Alone - worth 0 life points
+        You are a very lonely person but hey atleast you have more points.
+        
+    Married - worth 20 life points
+        You are married.
+        
+    Kid(s) - worth 25 life points
+        Though you lack a spouse you do have a kid or multiple, your choice.
+        
+    Married with kid(s) - worth 30 life points
+        You are married and have a kid or kids.
+        
+    ("alone", "spouse", "child", "full family")
+""")
+
+        if lifequestion2=="alone":
+            life=life-alone
+            print("House:", house, " Life:", life, " Self:", self)
+        
+        elif lifequestion2=="spouse":
+            life=life-spouse
+            print("House:", house, " Life:", life, " Self:", self)
+            
+        elif lifequestion2=="child":
+            life=life-child
+            print("House:", house, " Life:", life, " Self:", self)
+        
+        elif lifequestion2=="full family":
+            life=life-family
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion2:
+            print("error, restart game")
+            exit()
+
+        lowerclass=0
+        middleclass=10
+        upperclass=15
+        aristocrat=25
+
+        lifequestion3 = input("""What about your social status
+
+    Lower class - worth 0
+        You are one of the lower class, usually full of the jobless or heavy manual labor workers.
+        They are looked down upon though amongst eachother allies can always be found.
+        
+    Middle class - worth 10
+        You are one of the middle class, usually this consists of normal mediocre jobs within the town.
+        They are considered the common folk and though not especially important, are not looked at with excessive suspicion in cases of most crimes.
+        
+    Upper class - worth 15
+        You are one of the upper class, usually this is made up of those who work in the church or own their own very succesful bussiness.
+        Very important members of society they have many paid allies and the law will occasionally turn a blind eye, paid allies may not always be loyal though.
+        
+    Aristocrat - worth 25
+        The highest class there is, made up of nobility.
+        They can easily have meetings with important officials and the law will usually turn a blind eye to anything less than public murders.
+        
+    ("lower", "middle", "upper", or "aristocrat")
+""")
+        
+        if lifequestion3=="lower":
+            life=life-lowerclass
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion3=="middle":
+            life=life-middleclass
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion3=="upper":
+            life=life-upperclass
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion3=="aristocrat":
+            life=life-aristocrat
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion3:
+            print("error, restart game")
+            exit()
+
+        poormoney=0
+        enoughmoney=15
+        wellmoney=25
+        richmoney=35
+
+        lifequestion4 = input("""How wealthy are you?
+
+    Poor - 0
+        You're broke.
+        
+    Enough to get by - 15
+        You're not rich but you have enough to survive.
+        
+    Living well -25
+        You're still not rich but you make enough to live comfortably and occasionally splurge even.
+        
+    Rich - 35
+        You are rich, you can easily buy anything you want though this may cause dislike from those with less.
+        
+    ("poor", "enough", "well", "rich")
+""")
+
+        if lifequestion4=="poor":
+            life=life-poormoney
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion4=="enough":
+            life=life-enoughmoney
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion4=="well":
+            life=life-wellmoney
+            print("House:", house, " Life:", life, " Self:", self)
+                
+        elif lifequestion4=="rich":
+            life=life-richmoney
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif lifequestion4:
+            print("error, restart game")
+            exit()
+    
+        court=20
+        academy=15
+        mount=10
+        magicalmount=15
+
+        while life>0:
+            lifequestion5 = input("""What Bonuses would you like
+
+    A normal mount - worth 10 life points
+        A horse that you can use to get from one place to another.
+        
+    Academic achievements - worth 15 life points
+        You are an established scholar and as such, are treated with high respect by those who know you.
+        
+    A magical mount - worth 15 life points
+        A mount of your choice, it can be a Hellhound, Unicorn, Dragon, Griffon, or any other creature.
+        
+    In the royal court - worth 20 life points
+        You are a member of the royal city and can easily influence desicions about it, as long as the others agree.
+        
+    Add other points to self - worth remaining life points
+        Add your life points to self and move on.
+        
+    ("court","academy","mount", "magical mount", or "add")
+""")
+    
+            if lifequestion5=="court":
+                life=life-court
+                print("House:", house, " Life:", life, " Self:", self)
+        
+            elif lifequestion5=="academy":
+                life=life-academy
+                print("House:", house, " Life:", life, " Self:", self)
+        
+            elif lifequestion5=="mount":
+                life=life-mount
+                print("House:", house, " Life:", life, " Self:", self)
+        
+            elif lifequestion5=="magical mount":
+                life=life-magicalmount
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif lifequestion5=="add":
+                self = self+life
+                life = 0
+                print("House:", house, " Life:", life, " Self:", self)
+
+            elif lifequestion5:
+                print("error, restart game")
+                exit()
+
+    if life<0:
+        print("error, restart game")
+        exit()
+
+    pyro=10
+    aero=10
+    geo=10
+    aqua=10
+    umbra=20
+    cryo=20
+    atmo=20
+
+    selfquestion1 = input("""What powers would you like?
+
+    None - worth 0 self points
+        You are unlucky enough to have no powers.
+        
+    Pyromancer - worth 10 self points
+        You can control and create fire.
+        
+    Aeromancy - worth 10 self points
+        You can control and create air.
+        
+    Geomancy - worth 10 self points
+        You can control and create earth.
+        
+    Aquamancer- worth 10 self points
+        You can control and create water.
+        
+    Umbramancer - worth 20 self points
+        You can control and create shadows.
+        
+    Cryomancer - worth 20 self points
+        You can control and create ice.
+        
+    Atmomancer - worth 20 self points
+        You can control and create weather.
+        
+    ("none", "fire","air","earth","water","shadow","ice", or "weather")
+""")
+
+    if selfquestion1=="none":
+        print("House:", house, " Life:", life, " Self:", self)        
+
+    elif selfquestion1=="fire":
+        self=self-pyro
+        print("House:", house, " Life:", life, " Self:", self)
+
+    elif selfquestion1=="air":
+        self=self-aero
+        print("House:", house, " Life:", life, " Self:", self)
+
+    elif selfquestion1=="earth":
+        self=self-geo
+        print("House:", house, " Life:", life, " Self:", self)
+
+    elif selfquestion1=="water":
+        self=self-aqua
+        print("House:", house, " Life:", life, " Self:", self)
+
+    elif selfquestion1=="shadow":
+        self=self-umbra
+        print("House:", house, " Life:", life, " Self:", self)
+
+    elif selfquestion1=="ice":       
+        self=self-cryo
+        print("House:", house, " Life:", life, " Self:", self)
+
+    elif selfquestion1=="weather":
+        self=self-atmo
+        print("House:", house, " Life:", life, " Self:", self)
+
+    elif selfquestion1:
+        print("error, restart game")
+        exit()
+
+    commonpet=10
+    rarepet=15
+    exoticpet=20
+    magicalpet=30
+    familiarpet=35
+
+    selfquestion2 = input("""What pet would you like?"
+
+    None - worth 0 self points
+        You are a heartless person but fine you have no pet.
+        
+    Common pet - worth 10 self points
+        You have a common pet such as a cat or a dog.
+        
+    Rare pet - worth 15 self points
+        You have a rare pet such as a lizard or bird.
+        
+    Exotic pet - worth 20 self points
+        You have an exotic pet such as a tiger or a cobra.
+        
+    Magical pet - worth 30 self points
+        You have a magical pet such as a dragon hatchling or a basilisk.
+        
+    Familiar - worth 35 self points
+        You have a familiar which will increase your magical ability and be constantly loyal, it can be any animal or magical creature.
+        
+    ("none","common","rare","exotic","magical", or "familiar")
+""")
+
+    if selfquestion2=="none":
+        print("House:", house, " Life:", life, " Self:", self)
+        
+    elif selfquestion2=="common":
+        self=self-commonpet
+        print("House:", house, " Life:", life, " Self:", self)
+        
+    elif selfquestion2=="rare":
+        self=self-rarepet
+        print("House:", house, " Life:", life, " Self:", self)
+        
+    elif selfquestion2=="exotic":
+        self=self-exoticpet
+        print("House:", house, " Life:", life, " Self:", self)
+        
+    elif selfquestion2=="magical":
+        self=self-magicalpet
+        print("House:", house, " Life:", life, " Self:", self)
+        
+    elif selfquestion2=="familiar":
+        self=self-familiarpet
+        print("House:", house, " Life:", life, " Self:", self)
+
+    elif selfquestion2:
+        print("error, restart game")
+        exit()
+
+    baking=10
+    smithing=10
+    appraisal=15
+    alchemy=20
+    beasttaming=25
+    teaching=25
+    skills=0
+
+    while skills<2:
+        
+        selfquestion3 = input("""What are your skills? (you may pick up to three)
+
+    None - worth 0 self points
+        You have no skills.
+        
+    Baking - worth 10 self points
+        You have baking skills allowing you to be a better baker and know how to make more recipes.
+        
+    Smithing - worth 10 self points
+        You are a talented smith who can use many more metals and make more complicated things.
+        
+    Appraisal - worth 15 self points
+        You are more talented at figuring out the appropriate prices of items and knowing what they are made of.
+        
+    Alchemy - worth 20 self points
+        You are a talented alchemist who can brew many elixirs, potions, and poisons.
+        
+    Beast Taming - worth 25 self points
+        You are a talented beast tamer who will find it much easier to tame difficult creatures such as dragons or basilisk.
+        
+    Teaching - worth 25 self points
+        You are better at teaching than most and can easily keep the attention of those who listen.
+        
+    ("none","baking","smithing","appraisal","alchemy","beast taming", or "teaching")
+""")
+
+        if selfquestion3=="none":
+            print("House:", house, " Life:", life, " Self:", self)
+            skills=skills+2
+            
+        elif selfquestion3=="baking":
+            self=self-baking
+            print("House:", house, " Life:", life, " Self:", self)
+            skills=skills+1
+            
+        elif selfquestion3=="smithing":
+            self=self-smithing
+            print("House:", house, " Life:", life, " Self:", self)
+            skills=skills+1
+        
+        elif selfquestion3=="apparaisal":
+            self=self-appraisal
+            print("House:", house, " Life:", life, " Self:", self)
+            skills=skills+1
+        
+        elif selfquestion3=="alchemy":
+            self=self-alchemy
+            print("House:", house, " Life:", life, " Self:", self)
+            skills=skills+1
+        
+        elif selfquestion3=="beast taming":
+            self=self-beasttaming
+            print("House:", house, " Life:", life, " Self:", self)
+        
+        elif selfquestion3=="teaching":
+            self=self-teaching
+            print("House:", house, " Life:", life, " Self:", self)
+            skills=skills+1
+        
+        elif selfquestion3:
+            print("error, restart game")
+            exit() 
+
+    magicaladept=20
+    multipets=20
+    plusskill=10
+    
+    while self>0:
+        
+        selfquestion4=input("""What bonuses would you like?
+
+    Magically adept - 20
+        You are more talented at magic than most and are more powerful.
+        
+    Multiple pets - 20
+        You can have as many as you want of your chosen pet.
+        
+    Enhance one skill (can be taken for each skill) - 10 (20 for second skill)
+        The skill of your choice will be far more effective and you will be far better than most others.
+        
+    Finish - removes remaining points
+        Finishes your choices.
+        
+    ("adept","pets","skill","finish")
+""")
+        if selfquestion4=="adept":
+            self=self-magicaladept
+            print("House:", house, " Life:", life, " Self:", self)
+            
+        elif selfquestion4=="pets":
+            self=self-multipets
+            print("House:", house, " Life:", life, " Self:", self)
+            
+        elif selfquestion4=="skill":
+            self=self-plusskill
+            plusskill=plusskill+10
+            print("House:", house, " Life:", life, " Self:", self)
+
+        elif selfquestion4=="finish":
+            self=0
+            print("House:", house, " Life:", life, " Self:", self)
+            
+        elif selfquestion4:
+            print("error, restart game")
+            exit()
+
+if self<0:
+    print("error, restart game")
+    exit()
+
+difficulty=0
+pests=5
+unrulypets=5
+uncontrolledmagic=5
+wildbeast=10
+haunted=10
+slowbusiness=10
+dangerousforest=15
+suspiciousvillage=15
+cult=15
+demonicpresence=20
+outcast=20
+enemy=20
+while difficulty<25:
+
+    challenges=input("""Now you need to pick what challenges you will face in this new world, you will need atleast 25 difficulty points:
+
+    Pest Infestation - adds 5 difficulty
+        Your home will have a minor pest infestation that will need to be taken care of quickly and though an inconvenience, not particularly troubling.
+        
+    Unruly Pet - adds 5 difficulty
+        Your pet is untrained and will not listen to you until it has been trained.
+        
+    Uncontrolled Magic - adds 5 difficulty
+        Your magic is new to you and you will not be able to use it correctly until you can learn to control it.
+        
+    Wild Beast - adds 10 difficulty
+        There is an unknown wild creature attacking your town and killing many outside it, until someone does something the attacks will continue
+        
+    Haunted - adds 10 difficulty
+        Your home is haunted with a particularly disruptive spirit, one way or another it has to be stopped.
+        
+    Slow Business - adds 10 difficulty
+        The town is isolated from most other places and as such, don't expect many customers.
+        
+    Dangerous Forest - adds 15 difficulty
+        The forest surrounding the town is very dangerous as aggresive creatures and misleading ghosts wander amongst the trees.
+        
+    Suspicious Town - adds 15 difficulty
+        The town highly dislikes outsider or those who step out of line, be prepared for
+        
+    Cult - adds 15 difficulty
+        Between swapped glances, unusual murders, and common dissapearences something is clearly wrong in the town but can it be stopped in time?
+        
+    Demonic Presence - adds 20 difficulty
+        One way or another a demon has chosen to wander the town, making crossroad deals that end in death, it will need to be stopped before it hurts many more people.
+        
+    Outcast - adds 20 difficulty
+        You are an outcast in the entire town, no one trusts you and every crime will leave you a suspect.
+        
+    Enemy - adds 20 difficulty
+        You somehow have gained an enemy that wants nothing more than you dead.
+        
+    ("pests","pet","magic","beasts","haunted","business","forest","village","cult","demons","outcast", or "enemy")
+""")
+
+    if challenges=="pests":
+        difficulty=difficulty+pests
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="pet":
+        difficulty=difficulty+unrulypets
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="magic":
+        difficulty=difficulty+uncontrolledmagic
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="beasts":
+        difficulty=difficulty+wildbeast
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="haunted":
+        difficulty=difficulty+haunted
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="business":
+        difficulty=difficulty+slowbusiness
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="forest":
+        difficulty=difficulty+dangerousforest
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="village":
+        difficulty=difficulty+suspiciousvillage
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="cult":
+        difficulty=difficulty+cult
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="demons":
+        difficulty=difficulty+demonicpresence
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="outcast":
+        difficulty=difficulty+outcast
+        print("difficulty level:", difficulty)
+        
+    elif challenges=="enemy":
+        difficulty=difficulty+enemy
+        print("difficulty level:", difficulty)
+
+    elif challenges:
+        print("error or typo, retry")
+
+print("""Congrats you have reached:
+The End""")
+
